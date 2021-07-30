@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".setting_stock.SettingStockFragment"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/settingStockTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/tracking_your_stock"
+            tools:text="당신의 주식을\n지금 추적하세요!" />
+
+        <com.teamnoyes.stock_news_tracker.custom_view.SettingStockView
+            android:id="@+id/setStockView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            app:SSVBackground="@drawable/select_stock_corner_16dp"
+            app:SSVImage="@drawable/ic_baseline_feed_24"
+            app:SSVText="@string/select_subject"
+            app:layout_constraintBottom_toTopOf="@id/badSubjectView"
+            app:layout_constraintEnd_toStartOf="@id/goodSubjectView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settingStockTextView" />
+
+        <com.teamnoyes.stock_news_tracker.custom_view.SettingStockView
+            android:id="@+id/goodSubjectView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            app:SSVBackground="@drawable/good_thing_corner_16dp"
+            app:SSVImage="@drawable/good"
+            app:SSVText="@string/good_thing"
+            app:layout_constraintBottom_toTopOf="@id/startTrackingView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/setStockView"
+            app:layout_constraintTop_toBottomOf="@id/settingStockTextView" />
+
+        <com.teamnoyes.stock_news_tracker.custom_view.SettingStockView
+            android:id="@+id/badSubjectView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            app:SSVBackground="@drawable/bad_thing_corner_16dp"
+            app:SSVImage="@drawable/bad"
+            app:SSVText="@string/bad_thing"
+            app:layout_constraintBottom_toTopOf="@id/blankView"
+            app:layout_constraintEnd_toStartOf="@id/startTrackingView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/setStockView" />
+
+        <com.teamnoyes.stock_news_tracker.custom_view.SettingStockView
+            android:id="@+id/startTrackingView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            app:SSVBackground="@drawable/start_tracker_corner_16dp"
+            app:SSVImage="@drawable/check"
+            app:SSVText="@string/start_tracking"
+            app:layout_constraintBottom_toTopOf="@id/blankView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/badSubjectView"
+            app:layout_constraintTop_toBottomOf="@id/goodSubjectView" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/blankView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <merge
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:tint="@color/icon_tint"
+            android:layout_marginBottom="8dp"
+            tools:src="@drawable/logo"
+            android:id="@+id/settingStockImageView"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:id="@+id/settingStockTitleTextView"
+            tools:text="test"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+    </merge>
+</layout>
